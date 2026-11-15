@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "energy-payment-reconciliation"
+version = "0.1.0"
+description = "Synthetic utility payment reconciliation portfolio simulation"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.11"
+
+dependencies = [
+  "pydantic>=2.10,<3", "SQLAlchemy>=2.0,<3", "pandas>=2.2,<4",
+  "numpy>=2.0,<3", "openpyxl>=3.1,<4", "XlsxWriter>=3.2,<4",
+  "streamlit>=1.67,<2", "plotly>=5.24,<7", "tzdata>=2024.2",
+]
+
+[project.urls]
+Repository = "https://github.com/malak129/energy-payment-reconciliation-analytics"
+Documentation = "https://github.com/malak129/energy-payment-reconciliation-analytics#readme"
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "ruff>=0.9,<1", "build>=1.2,<2",
+       "hypothesis>=6,<7", "coverage>=7,<8", "pip-audit>=2,<3"]
+
+[project.scripts]
+energy-reconciliation = "energy_reconciliation.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --strict-markers"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

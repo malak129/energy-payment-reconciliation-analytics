@@ -1,0 +1,14 @@
+# Synthetic portfolio simulation only. Paths resolve relative to this file.
+schema_version = "1"
+rules_version = "1"
+currency = "EUR"
+timezone = "Europe/Berlin"
+data_dir = "data"
+output_dir = "outputs"
+database_path = "data/reconciliation.sqlite3"
+seed = 42
+start_date = "2026-01-01"
+end_date = "2026-03-31"
+record_count = 100
+discrepancy_rate = "0.15"
+log_level = "INFO"

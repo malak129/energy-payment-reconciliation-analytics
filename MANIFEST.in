@@ -1,0 +1,6 @@
+include *.md
+include config.example.toml
+include LICENSE
+recursive-include docs *.md *.png
+recursive-include tools *.py
+include .streamlit/config.toml
