@@ -2,11 +2,21 @@
 
 ## Release status
 
-Local release checks pass. Public repository creation/push and actual GitHub
-Actions results will be recorded after publication; they are not yet claimed.
-Target account `malak129` was verified through authenticated GitHub CLI/API.
-The requested name `energy-payment-reconciliation-analytics` returned HTTP 404
-before creation. The local repository initially had no commits or remote.
+**Published and verified:**
+[malak129/energy-payment-reconciliation-analytics](https://github.com/malak129/energy-payment-reconciliation-analytics).
+The repository is PUBLIC, its default branch is main, and all eight requested
+topics are configured. Account `malak129` was verified through authenticated
+GitHub CLI/API. The name was checked absent immediately before creation; the
+local repository initially had no commits or remote. No remote content was
+overwritten and no history was rewritten or force-pushed.
+
+Verified implementation commit:
+`dba6d7af8acb6dbbcdca0104a53e48ee7c5fa03a`.
+[Actual GitHub Actions run 43756232832](https://github.com/malak129/energy-payment-reconciliation-analytics/actions/runs/43756232832)
+completed successfully for that commit. A subsequent documentation-only commit
+records these publication results and relocates the explanatory license policy;
+the application/test/CI source is unchanged by that follow-up. Current main status
+is available through the README's live workflow badge.
 
 ## Executed local results
 
@@ -27,6 +37,18 @@ before creation. The local repository initially had no commits or remote.
 | Dashboard | All seven real AppTest pages pass; all seven visited/captured in browser |
 | Screenshots | Seven genuine 1440×1000 JPEG captures; visually reviewed; synthetic data/relative paths only |
 | Primary / manifest / oracle | Original protected hashes unchanged |
+
+Remote CI results were read from GitHub, including its actual logs:
+
+| GitHub-hosted job | Tests | Complete job |
+|---|---|---|
+| Windows / Python 3.12 | 250 passed in 86.64 s | SUCCESS |
+| Ubuntu / Python 3.12 | 250 passed in 29.12 s | SUCCESS |
+| Ubuntu / Python 3.11 | 250 passed in 31.34 s | SUCCESS |
+
+Every job also passed installation, dependency compatibility, Ruff, documentation
+links, wheel build and small deterministic financial/dashboard acceptance. These
+are observed results, not an inference from local checks or workflow configuration.
 
 Final staging review covers **106 files / 1,691,245 staged bytes** before this
 verification-record update: 58 Python files, 34 Markdown documents, seven JPEGs,
@@ -58,9 +80,12 @@ links, anchors and seven screenshot references locally and in CI.
 read-only-permission jobs on Ubuntu/Python 3.11 and 3.12 and Windows/Python 3.12,
 with immutable pins for verified official checkout/setup-python releases.
 `.gitignore` additionally excludes local secrets, logs and temporary backups.
-`LICENSE`, `LICENSE.md`, package metadata and MANIFEST adopt MIT and include
+`LICENSE`, `docs/LICENSING.md`, package metadata and MANIFEST adopt MIT and include
 documentation/license in source distribution preparation. The build backend
 minimum is setuptools 77 for the license-expression metadata syntax.
+The explanatory license policy was moved from `LICENSE.md` to `docs/LICENSING.md`
+after verifying GitHub initially presented it as a second, unidentified license.
+The root `LICENSE` remains the sole standard MIT grant; no license terms changed.
 
 One fresh-demo defect was found: the report demonstration checker assumed an
 empty Excel table must materialize its reserved blank row as worksheet cells.
@@ -116,8 +141,31 @@ are not included in Git. Detailed limitations are in [docs/LIMITATIONS.md](docs/
 
 ## Publication record
 
-Pending final reviewed staging and creation of the new repository. No publication
-or successful remote CI result is asserted by this pre-publication record.
+`gh repo create` created the new public repository and pushed main successfully;
+`gh repo edit` applied the requested description/topics. All 106 remote Git blobs
+were compared with the reviewed initial commit and matched exactly. The README
+was also inspected on the public GitHub page: headings/tables/commands display,
+the genuine overview image loads at its original 1440×1000 size, and Mermaid
+renders the implemented architecture without a parse error. The license API
+recognizes the standard root MIT license. A local screenshot of the rendered
+README is retained in ignored release evidence.
+
+Published inventory: 44 package Python files, eight test files, six tool scripts,
+34 Markdown files, seven screenshot JPEGs, three TOML files, one workflow YAML,
+one source manifest, `.gitignore` and the MIT `LICENSE` (106 files total).
+Useful original technical/phase reports are included as dated records.
+
+Intentionally excluded: all generated data/oracles, the private primary SQLite
+database, every backup/incident database, temporary financial exports, local
+test/build/install/CI logs, virtual environments, credentials, `.env`/Streamlit
+secrets, caches and distribution archives. The only committed binaries are the
+seven authored synthetic dashboard screenshots, together under 1 MB. No external
+financial data, company assets or personally identifying Git email was published.
+
+Evidence was inspected before each push. The initial public implementation and
+subsequent documentation updates use fast-forward history and GitHub no-reply
+authorship. This report names the verified implementation commit and observed
+CI run; the final delivery message identifies the latest documentation commit.
 
 ## Future updates
 
